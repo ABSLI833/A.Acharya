@@ -229,7 +229,48 @@ border-radius:12px;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
 margin:20px;
 }
+/* ================= HERO STATS ================= */
 
+.hero{
+position:relative;
+padding-bottom:80px; /* IMPORTANT: space for stats */
+}
+
+.hero-stats{
+position:absolute;
+bottom:-30px;
+left:50%;
+transform:translateX(-50%);
+
+display:flex;
+justify-content:space-between;
+gap:30px;
+
+background:#ffffff;
+padding:20px 40px;
+border-radius:12px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+border:1px solid #eee;
+}
+
+/* EACH BOX */
+.hero-stats div{
+text-align:center;
+min-width:120px;
+}
+
+.hero-stats h3{
+margin:0;
+color:#d32f2f;
+font-size:20px;
+}
+
+.hero-stats p{
+margin:5px 0 0;
+font-size:13px;
+color:#666;
+}
 /* ================= SECTIONS ================= */
 
 section{
@@ -313,7 +354,30 @@ color:#666;
 
   <!-- RIGHT IMAGE -->
   <div class="hero-right"></div>
+<!-- STATS BAR -->
+<div class="hero-stats">
 
+  <div>
+    <h3>150K+</h3>
+    <p>Advisors</p>
+  </div>
+
+  <div>
+    <h3>300M+</h3>
+    <p>Customers</p>
+  </div>
+
+  <div>
+    <h3>₹100B+</h3>
+    <p>Group Value</p>
+  </div>
+
+  <div>
+    <h3>50+</h3>
+    <p>Countries</p>
+  </div>
+
+</div>
 </section>
 
 <!-- ================= OPPORTUNITY ================= -->
