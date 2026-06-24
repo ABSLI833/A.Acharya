@@ -247,19 +247,25 @@ padding-bottom:80px; /* IMPORTANT: space for stats */
 .hero-stats{
 position:absolute;
 bottom:-30px;
-left:50%;
-transform:translateX(-50%);
+
+/* FULL WIDTH */
+left:0;
+width:100%;
+
+/* REMOVE CENTER ALIGN */
+transform:none;
 
 display:flex;
-justify-content:space-between;
-gap:30px;
+justify-content:space-around;
 
 background:#ffffff;
-padding:20px 40px;
-border-radius:12px;
+padding:20px 0;
+
+border-radius:0; /* IMPORTANT: remove rounded card look */
 
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
-border:1px solid #eee;
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
 }
 
 /* EACH BOX */
