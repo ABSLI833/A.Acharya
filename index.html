@@ -293,7 +293,7 @@ padding:80px 5%;
 
 .opportunity-container{
 display:flex;
-align-items:center;
+align-items:center;  /* IMPORTANT */
 justify-content:space-between;
 gap:40px;
 }
@@ -301,17 +301,21 @@ gap:40px;
 /* LEFT */
 .opportunity-left{
 width:50%;
+padding-right:20px;
 }
 
 .opportunity-left h2{
-font-size:32px;
+font-size:36px;   /* INCREASE */
+font-weight:700;
 margin-bottom:15px;
 }
 
 .opportunity-sub{
 color:#555;
 margin-bottom:20px;
-max-width:500px;
+max-width:520px;
+font-size:16px;   /* SLIGHTLY BIGGER */
+line-height:1.6;
 }
 
 /* POINTS */
@@ -323,7 +327,7 @@ margin-bottom:20px;
 }
 
 .opportunity-points div{
-font-size:14px;
+font-size:15px;   /* BIGGER */
 color:#333;
 }
 
@@ -338,12 +342,12 @@ color:#333;
 }
 
 /* RIGHT IMAGE */
-.opportunity-right{
-width:50%;
-}
-
 .opportunity-right img{
-width:100%;
+width:85%;              /* REDUCE SIZE */
+max-width:400px;        /* CONTROL WIDTH */
+display:block;
+margin-left:auto;       /* ALIGN RIGHT */
+
 border-radius:10px;
 box-shadow:0 8px 25px rgba(0,0,0,0.05);
 }
