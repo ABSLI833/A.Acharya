@@ -293,44 +293,48 @@ padding:80px 5%;
 
 /* CONTAINER */
 .opportunity-container{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;      /* <-- Center the image with the whole text block */
+    gap:40px;
 }
 
 /* LEFT */
 .opportunity-left{
-width:55%;
+    flex:0 0 56%;
 }
 
 .opportunity-right{
-width:45%;
+    flex:0 0 44%;
+    display:flex;
+    justify-content:center;
 }
 
 .opportunity-left h2{
-font-size:36px;
-font-weight:700;
-margin-top:0;
-margin-bottom:15px;
-max-width:420px;
-line-height:1.3;
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:18px;
+    color:#111;
 }
 
 .opportunity-sub{
-color:#555;
-margin-bottom:20px;
-max-width:520px;
-font-size:16px;
-line-height:1.6;
+    font-size:18px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:28px;
 }
 
 /* POINTS */
 .opportunity-points{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-bottom:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 35px;
+    margin-bottom:30px;
+}
+
+.opportunity-points div{
+    font-size:17px;
+    font-weight:500;
 }
 
 .opportunity-points div{
@@ -346,13 +350,18 @@ gap:12px;
 }
 
 .highlight-box{
-background:#f5f5f5;
-padding:14px 16px;
-border-radius:8px;
-border-left:4px solid #d32f2f;
-font-size:14px;
-color:#333;
-max-width:420px;
+    background:#ffffff;
+    border-left:5px solid #d32f2f;
+    border-radius:10px;
+    padding:16px 18px;
+    margin-bottom:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.highlight-box:hover{
+    transform:translateX(8px);
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
 /* RIGHT */
@@ -364,13 +373,15 @@ align-items:flex-start;   /* Align image with heading */
 }
 
 .opportunity-right img{
-width:100%;
-max-width:430px;          /* Slightly larger */
-height:auto;
-border-radius:10px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    width:100%;
+    max-width:430px;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.4s ease;
 }
-
+.opportunity-right img:hover{
+    transform:translateY(-8px);
+}
 </style>
 </head>
 
