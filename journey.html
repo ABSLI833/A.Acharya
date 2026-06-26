@@ -30,6 +30,7 @@ body{
     font-family:'Poppins',sans-serif;
     background:#f5f7fb;
     color:#222;
+    overflow-x:hidden;
 }
 
 /*========== SECTION ==========*/
@@ -105,6 +106,14 @@ body{
 
     position:relative;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
     background:#ffffff;
 
     border-radius:24px;
@@ -119,9 +128,9 @@ body{
 
     box-shadow:0 15px 40px rgba(0,0,0,.08);
 
-    transition:.35s;
+    transition:all .35s ease;
 
-    min-height:320px;
+    height:320px;
 
 }
 
@@ -236,7 +245,7 @@ body{
 .career-body h3{
 
     font-size:28px;
-
+line-height:1.3;
     margin-bottom:16px;
 
     color:#222;
@@ -517,7 +526,8 @@ body{
 
     color:#fff;
 
-    font-size:18px;
+    font-size:20px;
+letter-spacing:.5px;
 
     font-weight:700;
 
