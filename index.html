@@ -3291,19 +3291,19 @@ html{
     }
 
 }
-      /*=========================================
-            FOOTER - PHASE 2
+    /*=========================================
+        PREMIUM FOOTER - PHASE 2
 ==========================================*/
 
 /*========== FOOTER ==========*/
 
-.site-footer{
+.premium-footer{
 
-    background:#111827;
+    background:#101827;
 
     color:#ffffff;
 
-    padding:80px 6% 35px;
+    padding:80px 6% 30px;
 
     border-top:5px solid #d32f2f;
 
@@ -3319,13 +3319,13 @@ html{
 
 }
 
-/*========== TOP ==========*/
+/*========== BRAND ==========*/
 
-.footer-top{
+.footer-brand{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:70px;
 
 }
 
@@ -3335,13 +3335,13 @@ html{
 
     line-height:1.35;
 
-    font-weight:700;
-
     margin-bottom:18px;
+
+    font-weight:700;
 
 }
 
-.footer-brand h2 span{
+.footer-brand span{
 
     color:#f4b400;
 
@@ -3349,27 +3349,23 @@ html{
 
 .footer-brand p{
 
-    color:#d1d5db;
-
     font-size:18px;
 
-    letter-spacing:.5px;
+    color:#cbd5e1;
 
 }
 
-/*========== GRID ==========*/
+/*========== MAIN GRID ==========*/
 
-.footer-grid{
+.footer-main{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr 1.4fr;
+    grid-template-columns:1fr 1fr 1fr;
 
-    gap:60px;
+    gap:70px;
 
-    padding-bottom:50px;
-
-    border-bottom:1px solid rgba(255,255,255,.12);
+    margin-bottom:60px;
 
 }
 
@@ -3377,11 +3373,11 @@ html{
 
 .footer-column h3{
 
-    font-size:24px;
-
     color:#f4b400;
 
-    margin-bottom:25px;
+    font-size:30px;
+
+    margin-bottom:30px;
 
 }
 
@@ -3397,7 +3393,7 @@ html{
 
 .footer-column ul li{
 
-    margin-bottom:18px;
+    margin-bottom:24px;
 
     color:#d1d5db;
 
@@ -3407,7 +3403,13 @@ html{
 
 .footer-column ul li strong{
 
+    display:block;
+
+    margin-top:6px;
+
     color:#ffffff;
+
+    font-size:19px;
 
     font-weight:600;
 
@@ -3415,101 +3417,151 @@ html{
 
 /*========== LINKS ==========*/
 
-.footer-column ul li a{
+.footer-column a{
+
+    display:block;
 
     color:#d1d5db;
 
     text-decoration:none;
 
+    margin-bottom:18px;
+
     transition:.35s;
 
 }
 
-.footer-column ul li a:hover{
+.footer-column a:hover{
 
     color:#f4b400;
 
-    padding-left:6px;
+    padding-left:8px;
+
+}
+
+/*========== SOCIAL ==========*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+.footer-social a{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:#1f2937;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:#f4b400;
+
+    color:#111;
+
+    transform:translateY(-6px);
+
+}
+
+/*========== LEGAL ==========*/
+
+.footer-legal h3{
+
+    color:#f4b400;
+
+    margin-bottom:20px;
+
+}
+
+.footer-legal a{
+
+    display:block;
+
+    margin-bottom:15px;
 
 }
 
 /*========== DISCLAIMER ==========*/
 
+.footer-disclaimer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    padding:45px 0;
+
+    text-align:center;
+
+}
+
+.footer-disclaimer h3{
+
+    color:#f4b400;
+
+    font-size:30px;
+
+    margin-bottom:22px;
+
+}
+
 .footer-disclaimer p{
+
+    max-width:1100px;
+
+    margin:0 auto 15px;
 
     color:#d1d5db;
 
     line-height:1.9;
 
-    margin-bottom:18px;
-
-    font-size:15px;
+    font-size:16px;
 
 }
 
-/*========== BOTTOM ==========*/
+/*========== COPYRIGHT ==========*/
 
 .footer-bottom{
 
+    text-align:center;
+
     margin-top:35px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.footer-bottom p{
 
     color:#9ca3af;
 
     font-size:15px;
 
-}
-
-.footer-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
-}
-
-.footer-links a{
-
-    color:#d1d5db;
-
-    text-decoration:none;
-
-    transition:.35s;
-
-}
-
-.footer-links a:hover{
-
-    color:#f4b400;
-
-}
-
-.footer-links span{
-
-    color:#6b7280;
+    letter-spacing:.5px;
 
 }
       /*=========================================
-            FOOTER - PHASE 3
-    RESPONSIVE & FINAL POLISH
+        PREMIUM FOOTER - PHASE 3
+        RESPONSIVE & FINAL POLISH
 ==========================================*/
 
-/*========== HOVER ANIMATION ==========*/
+/*========== HOVER EFFECTS ==========*/
 
 .footer-column{
 
@@ -3523,69 +3575,53 @@ html{
 
 }
 
-/*========== CONTACT HOVER ==========*/
-
-.footer-column ul li{
-
-    transition:all .35s ease;
-
-}
-
-.footer-column ul li:hover{
-
-    color:#ffffff;
-
-}
-
-/*========== BRAND EFFECT ==========*/
-
-.footer-brand h2 span{
+.footer-brand span{
 
     transition:.35s;
 
 }
 
-.footer-brand:hover h2 span{
+.footer-brand:hover span{
 
     color:#ffffff;
 
 }
 
+.footer-disclaimer{
+
+    transition:.35s;
+
+}
+
+.footer-disclaimer:hover{
+
+    border-color:rgba(244,180,0,.35);
+
+}
+
 /*========== TABLET ==========*/
 
-@media (max-width:992px){
+@media (max-width:1024px){
 
-    .footer-grid{
+    .footer-main{
 
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
 
-        gap:45px;
-
-    }
-
-    .footer-brand h2{
-
-        font-size:36px;
+        gap:50px;
 
     }
 
-    .footer-column{
+    .footer-column:last-child{
+
+        grid-column:span 2;
 
         text-align:center;
 
     }
 
-    .footer-column ul{
+    .footer-social{
 
-        text-align:center;
-
-    }
-
-    .footer-bottom{
-
-        flex-direction:column;
-
-        text-align:center;
+        justify-content:center;
 
     }
 
@@ -3595,15 +3631,15 @@ html{
 
 @media (max-width:768px){
 
-    .site-footer{
+    .premium-footer{
 
         padding:70px 20px 30px;
 
     }
 
-    .footer-top{
+    .footer-brand{
 
-        margin-bottom:45px;
+        margin-bottom:50px;
 
     }
 
@@ -3611,7 +3647,7 @@ html{
 
         font-size:30px;
 
-        line-height:1.35;
+        line-height:1.4;
 
     }
 
@@ -3621,9 +3657,23 @@ html{
 
     }
 
+    .footer-main{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .footer-column{
+
+        text-align:center;
+
+    }
+
     .footer-column h3{
 
-        font-size:22px;
+        font-size:24px;
 
     }
 
@@ -3633,21 +3683,61 @@ html{
 
     }
 
+    .footer-column ul li strong{
+
+        font-size:17px;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .footer-social a{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:22px;
+
+    }
+
+    .footer-legal{
+
+        margin-top:30px;
+
+    }
+
+    .footer-disclaimer{
+
+        padding:35px 0;
+
+    }
+
+    .footer-disclaimer h3{
+
+        font-size:24px;
+
+    }
+
     .footer-disclaimer p{
 
-        font-size:14px;
+        font-size:15px;
 
         line-height:1.8;
 
     }
 
-    .footer-links{
+    .footer-bottom{
 
-        flex-wrap:wrap;
+        font-size:14px;
 
-        justify-content:center;
-
-        gap:12px;
+        line-height:1.7;
 
     }
 
@@ -3659,7 +3749,7 @@ html{
 
     .footer-brand h2{
 
-        font-size:26px;
+        font-size:25px;
 
     }
 
@@ -3671,25 +3761,41 @@ html{
 
     .footer-column h3{
 
+        font-size:22px;
+
+    }
+
+    .footer-social{
+
+        gap:14px;
+
+    }
+
+    .footer-social a{
+
+        width:48px;
+
+        height:48px;
+
         font-size:20px;
 
     }
 
-    .footer-column ul li{
+    .footer-disclaimer h3{
+
+        font-size:22px;
+
+    }
+
+    .footer-disclaimer p{
 
         font-size:14px;
 
     }
 
-    .footer-bottom p{
+    .footer-bottom{
 
         font-size:13px;
-
-    }
-
-    .footer-links a{
-
-        font-size:14px;
 
     }
 
@@ -5189,35 +5295,40 @@ faqItems.forEach(item => {
 
 </section>
 <!--=========================================
-                FOOTER
+            PREMIUM FOOTER
 ==========================================-->
 
-<footer class="site-footer">
+<footer class="premium-footer">
 
     <div class="footer-container">
 
-        <!-- Top -->
+        <!--==============================
+                BRAND
+        ==============================-->
 
-        <div class="footer-top">
+        <div class="footer-brand">
 
-            <div class="footer-brand">
+            <h2>
 
-                <h2>
-                    Career Opportunities with
-                    <span>Aditya Birla Sun Life Insurance</span>
-                </h2>
+                Career Opportunities with
 
-                <p>
-                    Build Your Career • Create Your Future
-                </p>
+                <span>Aditya Birla Sun Life Insurance</span>
 
-            </div>
+            </h2>
+
+            <p>
+
+                Build Your Career • Create Your Future
+
+            </p>
 
         </div>
 
-        <!-- Main Footer -->
+        <!--==============================
+                MAIN FOOTER
+        ==============================-->
 
-        <div class="footer-grid">
+        <div class="footer-main">
 
             <!-- Contact -->
 
@@ -5228,21 +5339,27 @@ faqItems.forEach(item => {
                 <ul>
 
                     <li>
+
                         📞 Phone / WhatsApp
-                        <br>
+
                         <strong>+91 8917689745</strong>
+
                     </li>
 
                     <li>
+
                         ✉ Email
-                        <br>
+
                         <strong>joinabc9@gmail.com</strong>
+
                     </li>
 
                     <li>
+
                         📍 Location
-                        <br>
+
                         <strong>Bhubaneswar, Odisha</strong>
+
                     </li>
 
                 </ul>
@@ -5275,53 +5392,73 @@ faqItems.forEach(item => {
 
             </div>
 
-            <!-- Disclaimer -->
+            <!-- Social + Legal -->
 
-            <div class="footer-column footer-disclaimer">
+            <div class="footer-column">
 
-                <h3>Disclaimer</h3>
+                <h3>Connect With Us</h3>
 
-                <p>
+                <div class="footer-social">
 
-                    This webpage is created solely for sharing career opportunities with Aditya Birla Sun Life Insurance.
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
 
-                </p>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
 
-                <p>
+                    <a href="https://wa.me/918917689745"><i class="fab fa-whatsapp"></i></a>
 
-                    It is managed by an authorized Insurance Advisor for recruitment and informational purposes only.
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
 
-                </p>
+                </div>
 
-                <p>
+                <div class="footer-legal">
 
-                    This website is not the official corporate website of Aditya Birla Sun Life Insurance Company Limited.
+                    <h3>Legal</h3>
 
-                </p>
+                    <a href="#">Privacy Policy</a>
+
+                    <a href="#">Terms & Conditions</a>
+
+                </div>
 
             </div>
 
         </div>
 
-        <!-- Bottom -->
+        <!--==============================
+                DISCLAIMER
+        ==============================-->
 
-        <div class="footer-bottom">
+        <div class="footer-disclaimer">
+
+            <h3>Disclaimer</h3>
 
             <p>
 
-                © 2026 Career Opportunities with Aditya Birla Sun Life Insurance. All Rights Reserved.
+                This webpage is created solely for sharing career opportunities with Aditya Birla Sun Life Insurance.
 
             </p>
 
-            <div class="footer-links">
+            <p>
 
-                <a href="#">Privacy Policy</a>
+                It is managed by an authorized Insurance Advisor for recruitment and informational purposes only.
 
-                <span>|</span>
+            </p>
 
-                <a href="#">Terms & Conditions</a>
+            <p>
 
-            </div>
+                This website is not the official corporate website of Aditya Birla Sun Life Insurance Company Limited.
+
+            </p>
+
+        </div>
+
+        <!--==============================
+                COPYRIGHT
+        ==============================-->
+
+        <div class="footer-bottom">
+
+            © 2026 Career Opportunities with Aditya Birla Sun Life Insurance. All Rights Reserved.
 
         </div>
 
