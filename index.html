@@ -4293,6 +4293,48 @@ Complete training, practical guidance, and continuous mentorship will be provide
     </div>
 
 </section>
+      <script>
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+    const icon = item.querySelector(".faq-icon");
+
+    question.addEventListener("click", () => {
+
+        // Close all other FAQs
+        faqItems.forEach(otherItem => {
+
+            if(otherItem !== item){
+
+                otherItem.classList.remove("active");
+
+                otherItem.querySelector(".faq-icon").textContent = "+";
+
+            }
+
+        });
+
+        // Toggle current FAQ
+        item.classList.toggle("active");
+
+        if(item.classList.contains("active")){
+
+            icon.textContent = "−";
+
+        }else{
+
+            icon.textContent = "+";
+
+        }
+
+    });
+
+});
+
+</script>
  </body>
 
 </html>
