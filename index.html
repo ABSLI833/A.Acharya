@@ -4429,6 +4429,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=938385985885863&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+    
 <body>
 <!-- ================= HEADER ================= -->
 
@@ -6152,13 +6153,14 @@ form.addEventListener("submit", function(e){
         body:JSON.stringify(formData)
     })
 
-    .then(response=>response.json())
-
     .then(data=>{
 
-        submitBtn.innerHTML = "✅ Application Submitted";
+    submitBtn.innerHTML = "✅ Application Submitted";
 
-const successBox = document.createElement("div");
+    // Meta Pixel Lead Event
+    fbq('track', 'Lead');
+
+    const successBox = document.createElement("div");
 
 successBox.innerHTML = `
 <div style="
