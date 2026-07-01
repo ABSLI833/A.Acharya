@@ -1559,6 +1559,235 @@ transparent);
     }
 
 }
+    /*=========================================
+        FAQ SECTION
+=========================================*/
+
+.faq-section{
+    position:relative;
+    background:#000;
+    padding:110px 20px;
+    overflow:hidden;
+}
+
+.faq-container{
+    max-width:1150px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.faq-bg-glow{
+    position:absolute;
+    width:550px;
+    height:550px;
+    background:radial-gradient(circle,
+            rgba(255,183,0,.18) 0%,
+            transparent 70%);
+    top:-150px;
+    left:50%;
+    transform:translateX(-50%);
+    filter:blur(70px);
+    pointer-events:none;
+}
+
+.faq-heading{
+    text-align:center;
+    margin-bottom:65px;
+}
+
+.faq-heading .section-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,215,0,.35);
+    color:#ffd54f;
+    padding:10px 22px;
+    border-radius:50px;
+    font-size:.95rem;
+    font-weight:600;
+    margin-bottom:22px;
+    backdrop-filter:blur(10px);
+}
+
+.faq-heading h2{
+    font-size:3rem;
+    font-weight:800;
+    color:#fff;
+    line-height:1.25;
+    margin-bottom:22px;
+}
+
+.faq-heading h2 span{
+    color:#FFD700;
+}
+
+.faq-heading p{
+    max-width:760px;
+    margin:auto;
+    color:#d8d8d8;
+    font-size:1.08rem;
+    line-height:1.8;
+}
+
+/*=========================
+      FAQ LIST
+==========================*/
+
+.faq-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.faq-item{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border-top:4px solid #d40000;
+    border-bottom:4px solid #FFD700;
+    transition:.4s ease;
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.35);
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:
+        0 20px 45px rgba(255,215,0,.18);
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 28px;
+    text-align:left;
+}
+
+.faq-question span{
+    font-size:1.15rem;
+    font-weight:700;
+    color:#222;
+    line-height:1.5;
+    padding-right:20px;
+}
+
+.faq-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#d40000;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.8rem;
+    font-weight:700;
+    flex-shrink:0;
+    transition:.35s ease;
+    box-shadow:
+        0 0 15px rgba(212,0,0,.35);
+}
+
+.faq-item.active .faq-icon{
+    background:#FFD700;
+    color:#000;
+    transform:rotate(45deg);
+    box-shadow:
+        0 0 18px rgba(255,215,0,.45);
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s ease;
+}
+
+.faq-answer p{
+    padding:0 28px 28px;
+    color:#555;
+    font-size:1rem;
+    line-height:1.8;
+}
+
+/*=========================
+     ACTIVE ITEM
+==========================*/
+
+.faq-item.active{
+    box-shadow:
+        0 20px 55px rgba(255,215,0,.18);
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    .faq-section{
+        padding:90px 20px;
+    }
+
+    .faq-heading h2{
+        font-size:2.4rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .faq-heading h2{
+        font-size:2rem;
+    }
+
+    .faq-heading p{
+        font-size:1rem;
+    }
+
+    .faq-question{
+        padding:20px;
+    }
+
+    .faq-question span{
+        font-size:1rem;
+    }
+
+    .faq-icon{
+        width:42px;
+        height:42px;
+        font-size:1.5rem;
+    }
+
+    .faq-answer p{
+        padding:0 20px 24px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .faq-section{
+        padding:75px 15px;
+    }
+
+    .faq-heading h2{
+        font-size:1.75rem;
+    }
+
+    .faq-heading .section-tag{
+        font-size:.82rem;
+        padding:8px 18px;
+    }
+
+}
     </style>
 
 </head>
@@ -2345,7 +2574,174 @@ form.addEventListener("submit",async function(e){
     submitBtn.innerHTML="Submit Request";
 });
 });
+<!-- =========================
+     FAQ SECTION START
+========================= -->
+<section class="faq-section" id="faq">
 
+    <div class="faq-bg-glow"></div>
+
+    <div class="faq-container">
+
+        <div class="faq-heading">
+
+            <span class="section-tag">
+                <i class="fas fa-circle-question"></i>
+                Frequently Asked Questions
+            </span>
+
+            <h2>
+                Everything You Need To Know About
+                <span>Adviora Official</span>
+            </h2>
+
+            <p>
+                Find quick answers to the most common questions about
+                Adviora Official, our services, support, and how we can
+                assist you.
+            </p>
+
+        </div>
+
+        <div class="faq-wrapper">
+
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+                <button class="faq-question">
+                    <span>What is Adviora Official?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Adviora Official is your trusted support platform
+                        designed to provide guidance, updates, resources,
+                        and assistance related to Adviora services.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can Adviora Official help me?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        We offer support, answer your queries, provide
+                        important updates, share useful resources, and help
+                        you connect with the right team whenever you need
+                        assistance.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How can I contact the Adviora support team?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        You can reach us anytime through the Contact or
+                        Support section on this website. Simply submit your
+                        details, and our team will get back to you as soon as
+                        possible.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is my personal information secure?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. We value your privacy and handle your
+                        information responsibly. Your submitted details are
+                        used only for communication and support purposes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How quickly will I receive a response?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Our team aims to respond as quickly as possible
+                        during working hours. Response times may vary
+                        depending on the nature of your request.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I request help for any Adviora-related issue?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Absolutely. Whether you have a question, need
+                        guidance, or require assistance, our support team is
+                        here to help.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do I need to create an account to contact Adviora?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        No. You can simply fill out the support form, and our
+                        team will assist you without requiring an account.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Where can I get the latest updates from Adviora?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Visit Adviora Official regularly to stay updated
+                        with the latest announcements, resources, and
+                        important information.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     FAQ SECTION END
+========================= -->
 </script>
 
 </body>
