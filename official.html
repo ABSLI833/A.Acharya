@@ -493,19 +493,70 @@ rgba(255,255,255,0)
     color:#333;
 
 }
+    .why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-45%;
+
+    width:25%;
+    height:100%;
+
+    background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+rgba(255,228,120,.35),
+rgba(255,255,255,.25),
+transparent);
+
+    transform:skewX(-20deg);
+
+    transition:.7s;
+
+}
+
+.why-card:hover::before{
+
+    left:135%;
+
+}
 
 /*=========================
         IMAGE
 =========================*/
 
+.why-image{
+
+    overflow:hidden;
+    border-radius:24px;
+
+}
+
 .why-image img{
 
     width:100%;
-    border-radius:24px;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
     display:block;
+    border-radius:24px;
+
+    transition:.5s ease;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
 
 }
+
+.why-image:hover img{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 22px 50px rgba(0,0,0,.18);
+
+}
+    
 
 /*=========================
       FEATURES
@@ -530,6 +581,20 @@ rgba(255,255,255,0)
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s ease;
+
+}
+
+.feature-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.14);
+
 }
 
 .feature-box h4{
@@ -545,6 +610,51 @@ rgba(255,255,255,0)
     font-size:19px;
     color:#444;
     line-height:1.7;
+
+}
+    .feature-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-45%;
+
+    width:22%;
+    height:100%;
+
+    background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.22),
+rgba(255,228,120,.32),
+rgba(255,255,255,.22),
+transparent);
+
+    transform:skewX(-20deg);
+
+}
+
+.feature-box:hover::before{
+
+    animation:featureLight .8s ease;
+
+}
+
+@keyframes featureLight{
+
+    from{
+
+        left:-45%;
+
+    }
+
+    to{
+
+        left:140%;
+
+    }
 
 }
 
@@ -574,10 +684,20 @@ rgba(255,255,255,0)
 
 }
 
+.why-cta a{
+
+    transition:.35s ease;
+
+}
+
 .why-cta a:hover{
 
     background:#d62d2d;
     color:#fff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(214,45,45,.28);
 
 }
 
