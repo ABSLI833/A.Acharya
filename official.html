@@ -2403,68 +2403,59 @@ submitBtn.innerHTML="Submitting...";
     SEND DATA
 ==========================*/
 
+const formData = new FormData();
+
+formData.append("service", data.service);
+formData.append("name", data.name);
+formData.append("mobile", data.mobile);
+formData.append("email", data.email);
+formData.append("policy", data.policy);
+formData.append("subject", data.subject);
+formData.append("query", data.query);
+
 fetch(SCRIPT_URL,{
 
-method:"POST",
+    method:"POST",
 
-mode:"cors",
-
-headers:{
-
-"Content-Type":"application/json"
-
-},
-
-body:JSON.stringify(data)
+    body:formData
 
 })
 
-.then(response=>response.json())
+.then(res=>res.text())
 
 .then(result=>{
 
-if(result.result==="success"){
+    success.style.display="block";
 
-success.style.display="block";
+    form.reset();
 
-form.reset();
+    dynamicFields.innerHTML="";
 
-dynamicFields.innerHTML="";
+    setTimeout(()=>{
 
-setTimeout(()=>{
+        success.style.display="none";
 
-success.style.display="none";
+        modal.classList.remove("show");
 
-modal.classList.remove("show");
-
-},2500);
-
-}else{
-
-alert("Submission failed.");
-
-}
+    },2500);
 
 })
 
 .catch(error=>{
 
-console.log(error);
+    console.error(error);
 
-alert("Network Error");
+    alert("Network Error");
 
 })
 
 .finally(()=>{
 
-submitBtn.disabled=false;
+    submitBtn.disabled=false;
 
-submitBtn.innerHTML="Submit Request";
-
-});
+    submitBtn.innerHTML="Submit Request";
 
 });
-
 </script>
 
 </body>
