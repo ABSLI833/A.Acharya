@@ -2272,7 +2272,102 @@ placeholder="Write your query"></textarea>
 }
 
 }
-   
+ /*=====================================================
+            PART 3
+      GOOGLE SHEET SUBMISSION
+=====================================================*/
+
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbykIKRWfgzrtv99eNFh1rUaciCKjsPdmBcb67WECZq7cPtRtXp-avXeCq6ZFtulUQUK/exec";
+
+form.addEventListener("submit",async function(e){
+
+    e.preventDefault();
+
+    submitBtn.disabled=true;
+    submitBtn.innerHTML="Submitting...";
+
+    const subject=document.getElementById("subject");
+    const query=document.getElementById("query");
+
+    const data={
+
+        service:serviceName.value,
+
+        name:document.getElementById("name").value.trim(),
+
+        mobile:document.getElementById("mobile").value.trim(),
+
+        email:document.getElementById("email").value.trim(),
+
+        policy:document.getElementById("policy").value.trim(),
+
+        subject:subject ? subject.value : "",
+
+        query:query ? query.value : ""
+
+    };
+
+    try{
+
+        const response=await fetch(SCRIPT_URL,{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify(data),
+
+            redirect:"follow"
+
+        });
+
+        if(!response.ok){
+
+            throw new Error("Server Error");
+
+        }
+
+        const result=await response.json();
+
+        if(result.result==="success"){
+
+            success.style.display="block";
+
+            form.reset();
+
+            dynamicFields.innerHTML="";
+
+            setTimeout(function(){
+
+                success.style.display="none";
+
+                closePopup();
+
+            },2500);
+
+        }else{
+
+            alert("Submission failed.");
+
+        }
+
+    }catch(error){
+
+        console.error(error);
+
+        alert("Unable to submit your request. Please try again.");
+
+    }finally{
+
+        submitBtn.disabled=false;
+
+        submitBtn.innerHTML="Submit Request";
+
+    }
+
+});  
 </script>    
 </body>
 
