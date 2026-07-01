@@ -2286,27 +2286,40 @@ form.addEventListener("submit",async function(e){
     submitBtn.disabled=true;
     submitBtn.innerHTML="Submitting...";
 
-    const formData=new FormData();
-
-    formData.append("service",serviceName.value);
-    formData.append("name",document.getElementById("name").value);
-    formData.append("mobile",document.getElementById("mobile").value);
-    formData.append("email",document.getElementById("email").value);
-    formData.append("policy",document.getElementById("policy").value);
-
     const subject=document.getElementById("subject");
-    const query=document.getElementById("query");
+const query=document.getElementById("query");
 
-    formData.append("subject",subject ? subject.value : "");
-    formData.append("query",query ? query.value : "");
+const data={
 
-    try{
+    service:serviceName.value,
 
-        const response=await fetch(SCRIPT_URL,{
-            method:"POST",
-            body:formData,
-            mode:"no-cors"
-        });
+    name:document.getElementById("name").value,
+
+    mobile:document.getElementById("mobile").value,
+
+    email:document.getElementById("email").value,
+
+    policy:document.getElementById("policy").value,
+
+    subject:subject ? subject.value : "",
+
+    query:query ? query.value : ""
+
+};
+
+       const response=await fetch(SCRIPT_URL,{
+    method:"POST",
+    headers:{
+        "Content-Type":"application/json"
+    },
+    body:JSON.stringify(data)
+});
+
+const result=await response.json();
+
+if(result.result!=="success"){
+    throw new Error("Submission Failed");
+}
 
         success.style.display="block";
 
